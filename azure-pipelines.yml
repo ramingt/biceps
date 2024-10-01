@@ -10,11 +10,12 @@ jobs:
     steps:
       - task: AzureResourceManagerTemplateDeployment@3
         inputs:
-          deploymentScope: 'Subscription'
+          deploymentScope: 'Resource Group'
           azureResourceManagerConnection: 'TechPodDevOps'
           subscriptionId: '8a212724-2b09-4cf4-b15e-ea909d6bf920'
+          action: 'Create Or Update Resource Group'
+          resourceGroupName: 'rg'
           location: 'East US'
           templateLocation: 'Linked artifact'
           csmFile: 'main.bicep'
-          deploymentMode: 'incremental'
-
+          deploymentMode: 'Incremental'
