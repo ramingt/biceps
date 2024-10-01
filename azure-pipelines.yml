@@ -1,0 +1,20 @@
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+jobs:
+  - job: Deploy
+    steps:
+      - task: AzureResourceManagerTemplateDeployment@3
+        inputs:
+          deploymentScope: 'Subscription'
+          azureResourceManagerConnection: 'TechPodDevOps'
+          subscriptionId: '8a212724-2b09-4cf4-b15e-ea909d6bf920'
+          location: 'East US'
+          templateLocation: 'Linked artifact'
+          csmFile: 'main.bicep'
+          deploymentMode: 'validation'
+
