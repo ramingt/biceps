@@ -16,5 +16,5 @@ jobs:
           location: 'East US'
           templateLocation: 'Linked artifact'
           csmFile: 'main.bicep'
-          deploymentMode: 'validation'
+          deploymentMode: 'incremental'
 
