@@ -1,5 +1,5 @@
 resource stg 'Microsoft.Storage/storageAccounts@2023-05-01'= {
-  name: 'ramingtechpod4000'
+  name: 'ramingtechpod5000'
   location: resourceGroup().location
   
   sku: {
