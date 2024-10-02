@@ -1,6 +1,6 @@
 
 trigger:
-- new-features
+- main
 
 pool:
   vmImage: ubuntu-latest
